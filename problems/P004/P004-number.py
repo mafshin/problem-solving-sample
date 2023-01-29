@@ -1,14 +1,21 @@
-a = int(input())
-b = int(input())
-def c (a,b):
-    return(a + b)
-def d (a,b):
-    return(a - b)
-def e (a,b):
-    return(a * b)
-def f (a,b):
-    return(a / b)
-print(c(a,b))
-print(d(a,b))
-print(e(a,b))
-print(f(a,b))
+a = input()
+if a == '1':
+    print('one')
+if a == '2':
+    print('two')
+if a == '3':
+    print('three')
+if a == '4':
+    print('four')
+if a == '5':
+    print('five')
+if a == '6':
+    print('six')
+if a == '7':
+    print('seven')
+if a == '8':
+    print('eight')
+if a == '9':
+    print('nine')
+if a == '10':
+    print('ten')
