@@ -4,7 +4,7 @@ def even_odd(number):
     else : 
         return(f'{number} is odd')
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     a = int(input())
     answer = even_odd(a)
     print(answer)
