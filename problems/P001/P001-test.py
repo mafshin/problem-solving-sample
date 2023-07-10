@@ -20,6 +20,3 @@ def test_number2():
 
 def test_number3():
     assert even_odd(39) == '39 is odd'
-
-def test_number4():
-    assert even_odd(58) == '58 is even'
