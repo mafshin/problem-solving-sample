@@ -1,5 +1,5 @@
 def even_odd(number):
-    if a % 2 == 0:
+    if number % 2 == 0:
         return(f'{number} is even')
     else : 
         return(f'{number} is odd')
