@@ -1,25 +1,14 @@
-INPUT = int(input())
-if INPUT <= 5:
-    A = INPUT
-    B = INPUT - 1
-if INPUT >= 6:
-    A = INPUT + 6
-    B = INPUT + 4
+INPUT = int(input('input : '))
+H = INPUT * 2
 a = [1]
 b = [1 , 1]
 if len(a) <= INPUT:
-    print(' ' * A , a)
+    print('.' * H , a)
+    H -= 1
 if len(b) <= INPUT:
-    print(' ' * B , b)
-if INPUT <= 5:
-    H = INPUT - 1
-if INPUT >= 6:
-    H = INPUT + 5
+    print('.' * H , b)
 while len(a) <= INPUT and len(b) <= INPUT:
-    if INPUT <= 5:
-        H = H - 1
-    if INPUT >= 6:
-        H = H - 2
+    H -= 1
     a = [1]
     if len(b) <= INPUT:
         x = 0
@@ -30,7 +19,8 @@ while len(a) <= INPUT and len(b) <= INPUT:
             y += 1
         a.append(1)
         if len(a) <= INPUT :
-            print(' ' * H , a)
+            print('.' * H , a)
+            H -= 2
     if len(a) <= INPUT:
         b = [1]
         x = 0
@@ -41,8 +31,4 @@ while len(a) <= INPUT and len(b) <= INPUT:
             y += 1
         b.append(1)
         if len(b) <= INPUT:
-            if INPUT <= 5:
-                H = H - 1
-            if INPUT >= 6:
-                H = H - 2
-            print(' ' * H , b)
+            print('.' * H , b)
