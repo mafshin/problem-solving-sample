@@ -1,5 +1,5 @@
-m = []
 def is_preme(number):
+    m = []
     for d in range(2 , number):
         ispreme = True
         for c in range(2 , d):
