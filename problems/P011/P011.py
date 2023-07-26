@@ -1,5 +1,5 @@
-m = []
 def figunahe(number):
+    m = []
     m.append(1)
     m.append(1)
     a = 1
