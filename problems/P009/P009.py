@@ -8,7 +8,6 @@ def is_preme(number):
         if ispreme:
             m.append(d)
     return m
-
 if __name__ == '__main__':
     a = int(input())
     answer = is_preme(a)
