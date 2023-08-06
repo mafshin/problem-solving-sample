@@ -1,7 +1,7 @@
 def slohsen(number):
     m = []
     d = '@'
-    for b in range(number , 0 ,-1):
+    for b in range(number , 0 , -1):
         m.append(d * b)
     return m
 if __name__ == '__main__':
