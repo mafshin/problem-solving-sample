@@ -1,12 +1,12 @@
-INPUT = int(input('input : '))
+INPUT = int(input('int : '))
 H = INPUT * 2
 a = [1]
 b = [1 , 1]
 if len(a) <= INPUT:
-    print('.' * H , a)
+    print('.' * H , a , '.' * H)
     H -= 1
 if len(b) <= INPUT:
-    print('.' * H , b)
+    print('.' * H , b , '.' * H)
 while len(a) <= INPUT and len(b) <= INPUT:
     H -= 1
     a = [1]
@@ -19,7 +19,7 @@ while len(a) <= INPUT and len(b) <= INPUT:
             y += 1
         a.append(1)
         if len(a) <= INPUT :
-            print('.' * H , a)
+            print('.' * H , a , '.' * H)
             H -= 2
     if len(a) <= INPUT:
         b = [1]
@@ -31,4 +31,4 @@ while len(a) <= INPUT and len(b) <= INPUT:
             y += 1
         b.append(1)
         if len(b) <= INPUT:
-            print('.' * H , b)
+            print('.' * H , b , '.' * H)
