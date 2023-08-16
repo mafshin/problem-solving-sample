@@ -14,10 +14,11 @@ def P031(number):
                 for X in range(len(m)):
                     for Y in range(1 , len(m)):
                         if m[X] + m[Y] == number:
-                            if number % 2 ==0:
-                                n.append((m[X] , m[Y]))
-                            if number % 2 !=0:
-                                n.append(f"{number} is odd")
+                            if m[X] + m[Y] not in n:
+                                if number % 2 ==0:
+                                    n.append((m[X] , m[Y]))
+                                if number % 2 !=0:
+                                    n.append(f"{number} is odd")
     return n
 if __name__ == "__main__":
     a = int(input("int : "))
