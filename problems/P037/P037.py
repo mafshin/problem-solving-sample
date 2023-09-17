@@ -1,25 +1,25 @@
-def P037(number):
-    for x1 in number:
+def P037(number_1 , number_2):
+    for x1 in number_1:
         for x2 in m:
             if x1 == x2:
-                number.remove(x1)
+                number_1.remove(x1)
             if x1.endswith('.'):
                 if x1 == x2 + '.':
-                    number.insert(number.index(x1) , '.')
-                    number.remove(x1)
+                    number_1.insert(number_1.index(x1) , '.')
+                    number_1.remove(x1)
             if x1.endswith(','):
                 if x1 == x2 + ',':
-                    number.insert(number.index(x1) , ',')
-                    number.remove(x1)
+                    number_1.insert(number_1.index(x1) , ',')
+                    number_1.remove(x1)
             if x1.endswith('!'):
                 if x1 == x2 + '!':
-                    number.insert(number.index(x1) , '!')
-                    number.remove(x1)
+                    number_1.insert(number_1.index(x1) , '!')
+                    number_1.remove(x1)
             if x1.endswith('?'):
                 if x1 == x2 + '?':
-                    number.insert(number.index(x1) , '?')
-                    number.remove(x1)
-    return str(" ".join(number))
+                    number_1.insert(number_1.index(x1) , '?')
+                    number_1.remove(x1)
+    return str(" ".join(number_1))
 if __name__ == "__main__":
     a = input("input : ").split(' ')
     m = []
@@ -30,5 +30,5 @@ if __name__ == "__main__":
             break
         m.append(b)
         A += 1
-    answer = P037(a)
+    answer = P037(a , m)
     print(answer)
