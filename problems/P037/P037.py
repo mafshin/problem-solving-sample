@@ -1,6 +1,6 @@
 def P037(number_1 , number_2):
     for x1 in number_1:
-        for x2 in m:
+        for x2 in number_2:
             if x1 == x2:
                 number_1.remove(x1)
             if x1.endswith('.'):
