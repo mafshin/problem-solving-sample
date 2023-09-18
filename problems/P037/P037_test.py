@@ -17,3 +17,5 @@ def test2():
     B = ["is" , "This" , "very"]
 
     OUPUT = "text a long text which has many repeated text inside this long text."
+
+    assert P037(A , B) == OUPUT
