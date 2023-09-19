@@ -21,7 +21,7 @@ def P037(number_1 , number_2):
                     number_1.remove(x1)
     return str(" ".join(number_1))
 if __name__ == "__main__":
-    a = input("input : ").split()
+    a = input("input : ").split(' ')
     m = []
     A = 1
     while True:
