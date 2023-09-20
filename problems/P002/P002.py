@@ -1,14 +1,15 @@
-a = int(input())
-b = int(input())
-def c (a,b):
-    return(a + b)
-def d (a,b):
-    return(a - b)
-def e (a,b):
-    return(a * b)
-def f (a,b):
-    return(a / b)
-print(c(a,b))
-print(d(a,b))
-print(e(a,b))
-print(f(a,b))
+def P002(number_1 , number_2):
+    def c (number_1 , number_2):
+        return(number_1 + number_2)
+    def d (number_1 , number_2):
+        return(number_1 - number_2)
+    def e (number_1 , number_2):
+        return(number_1 * number_2)
+    def f (number_1  , number_2):
+        return(number_1 / number_2)
+    return c(number_1 , number_2) , d(number_1 , number_2), e(number_1 , number_2) , int(f(number_1 , number_2))
+if __name__ == "__main__":
+    a = int(input())
+    b = int(input())
+    answer = P002(a , b)
+    print(answer)
