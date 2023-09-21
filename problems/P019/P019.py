@@ -1,14 +1,14 @@
-def P019(number_1):
+def P019(number):
     ouput = []
     a = [1]
     b = [1 , 1]
-    if len(a) <= number_1:
+    if len(a) <= number:
         ouput.append(a)
-    if len(b) <= number_1:
+    if len(b) <= number:
         ouput.append(b)
-    while len(a) <= number_1 and len(b) <= number_1:
+    while len(a) <= number and len(b) <= number:
         a = [1]
-        if len(b) <= number_1:
+        if len(b) <= number:
             x = 0
             y = 1
             while y < len(b):
@@ -16,9 +16,9 @@ def P019(number_1):
                 x += 1 
                 y += 1
             a.append(1)
-            if len(a) <= number_1 :
+            if len(a) <= number :
                 ouput.append(a)
-        if len(a) <= number_1:
+        if len(a) <= number:
             b = [1]
             x = 0
             y = 1
@@ -27,7 +27,7 @@ def P019(number_1):
                 x += 1
                 y += 1
             b.append(1)
-            if len(b) <= number_1:
+            if len(b) <= number:
                 ouput.append(b)
     return ouput
 if __name__ == "__main__":
