@@ -1,15 +1,13 @@
-a = int(input())
-m = []
-n = []
-output = []
-for A in range(1 , a + 1):
-    b = int(input())
-    m.append(b)
-print("-----------------")
-for B in range(1 , a + 1):
-    d = int(input())
-    n.append(d)
-for x in range(1 , a + 1):
-    D = m[x - 1] + n[x - 1]
-    output.append(D)
-print(output)
+def P022(number , number_1 , number_2):
+    output = []
+    for x in range(1 , number + 1):
+        A = int(number_1[x - 1]) + int(number_2[x - 1])
+        output.append(str(A))
+    print()
+    return " ".join(output)
+if __name__ == "__main__":
+    a = int(input())
+    b = input().split(' ')
+    B = input().split(' ')
+    answer = P022(a , b , B)
+    print(answer)
