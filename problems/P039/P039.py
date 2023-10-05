@@ -12,6 +12,7 @@ def P039(number_1, list_1):
                             if x not in u:
                                 m.append((x , I))
     m.sort(key=lambda p: -1 * p[1])
+    m.reverse()
     ouput = []
     for OUPUT in m:
         ouput.append(OUPUT[0])
