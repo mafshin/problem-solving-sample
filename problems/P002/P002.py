@@ -1,4 +1,4 @@
-def P002(number_1 , number_2):
+def function(number_1 , number_2):
     def c (number_1 , number_2):
         return(number_1 + number_2)
     def d (number_1 , number_2):
@@ -11,5 +11,5 @@ def P002(number_1 , number_2):
 if __name__ == "__main__":
     a = int(input())
     b = int(input())
-    answer = P002(a , b)
+    answer = function(a , b)
     print(answer)
