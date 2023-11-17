@@ -14,6 +14,7 @@ def show_problem(problem_number):
     
     p001_ui.show_ui(problem_number == 1)
     p002_ui.show_ui(problem_number == 2)
+    p003_ui.show_ui(problem_number == 3)
 
     
 problem = Problem()

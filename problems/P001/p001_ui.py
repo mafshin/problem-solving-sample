@@ -1,6 +1,6 @@
 from nicegui import ui
 
-from P001.p001 import solution
+from P001 import even_odd
 
 class Options:
     def __init__(self):
@@ -23,7 +23,7 @@ def create_ui():
 
     def check_number():
         number = int(numberInput.value)
-        result = solution(number)
+        result = even_odd(number)
         output.text = result
 
     return root
