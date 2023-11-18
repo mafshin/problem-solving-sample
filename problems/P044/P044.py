@@ -21,7 +21,7 @@ for X in m:
                                     for x3 in a:
                                         if X != 'END':
                                             if int(x1) + int(x2) + int(x3) == int(X):
-                                                n.append(f'{int(X)} = {int(x1)} + {int(x2)} + {int(x3)}')
+                                                n.append(f' {int(X)} = {int(x1)} + {int(x2)} + {int(x3)} ')
 
 for ouput in n:
     print(ouput)
