@@ -1,18 +1,34 @@
 from nicegui import ui
-import P003
+from P003 import Year
 
-Number_Input1 = ui.input('first year')
-Number_Input2 = ui.input('second year')
+class Options:
+    def __init__(self):
+        self.visible = False 
+        self.first = True
 
-ui.button('OK' , on_click=lambda: Clik())
+options = Options()
 
-ui.run()
+def show_ui(visible):
+    options.visible = visible
+    if options.first:
+        options.first = False
+        root = create_ui()
+    
+def create_ui():
+    with ui.column().bind_visibility_from(options, 'visible') as root:
+        numberInput1 = ui.input('year 1')
+        numberInput2 = ui.input('year 2')
+        ui.button('Check Year', on_click=lambda: check_number())
+        output = ui.label()
 
-def Clik():
-    number_1 = int(Number_Input1.value)
-    number_2 = int(Number_Input2.value)
+    def check_number():
+        number1 = int(numberInput1.value)
+        number2 = int(numberInput2.value)
+        result = Year(number1 , number2)
+        output.text = (result , ' dey')
 
-    result = P003.Year(number_1 , number_2)
+    return root
 
-    ui.notify(result)
-    ui.label(result)
+if __name__ in {"__main__", "__mp_main__"}:
+    show_ui(True)
+    ui.run()

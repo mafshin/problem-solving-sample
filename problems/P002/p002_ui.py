@@ -1,6 +1,5 @@
 from nicegui import ui
-from P001.p001 import *
-from P002.p002 import add, divide, multiply, subtract
+from P002 import c , d , e , f
 
 class Options:
     def __init__(self):
@@ -20,25 +19,25 @@ def create_ui():
         numberInput1 = ui.input('Number 1')
         numberInput2 = ui.input('Number 2')
         with ui.row():
-            ui.button('+', on_click=lambda e: calculate(e))
-            ui.button('-', on_click=lambda e: calculate(e))
-            ui.button('/', on_click=lambda e: calculate(e))
-            ui.button('*', on_click=lambda e: calculate(e))
+            ui.button('+', on_click=lambda y: calculate(y))
+            ui.button('-', on_click=lambda y: calculate(y))
+            ui.button('/', on_click=lambda y: calculate(y))
+            ui.button('*', on_click=lambda y: calculate(y))
         output = ui.label()
 
-    def calculate(e):
-        operation = e.sender.text
+    def calculate(x):
+        operation = x.sender.text
         number1 = int(numberInput1.value)
         number2 = int(numberInput2.value)
 
         if operation == '+':
-            result = add(number1, number2)
+            result = c(number1, number2)
         elif operation == '-':
-            result = subtract(number1, number2)
+            result = d(number1, number2)
         elif operation == '/':
-            result = divide(number1, number2)
+            result = int(f(number1, number2))
         elif operation == '*':
-            result = multiply(number1, number2)
+            result = e(number1, number2)
 
         output.text = result
 
