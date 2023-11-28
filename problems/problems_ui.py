@@ -2,6 +2,7 @@ from nicegui import ui
 from P001 import p001_ui
 from P002 import p002_ui
 from P003 import p003_ui
+from P004 import p004_ui
 
 class Problem:
     def __init__(self):
@@ -16,6 +17,7 @@ def show_problem(problem_number):
     p001_ui.show_ui(problem_number == 1)
     p002_ui.show_ui(problem_number == 2)
     p003_ui.show_ui(problem_number == 3)
+    p004_ui.show_ui(problem_number == 4)
 
     
 problem = Problem()

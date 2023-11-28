@@ -1,5 +1,5 @@
 from nicegui import ui
-from P003.p003 import Year
+from P005 import P005
 
 class Options:
     def __init__(self):
@@ -12,22 +12,24 @@ def show_ui(visible):
     options.visible = visible
     if options.first:
         options.first = False
-        root = create_ui()
+        create_ui()
     
 def create_ui():
     with ui.column().bind_visibility_from(options, 'visible') as root:
-        numberInput1 = ui.input('year 1')
-        numberInput2 = ui.input('year 2')
-        ui.button('Check Year', on_click=lambda: check_number())
+        numberInput1 = ui.input('Number 1')
+        numberInput2 = ui.input('operator')
+        numberInput3 = ui.input('Number 2')
+        with ui.row():
+            ui.button()
         output = ui.label()
 
-    def check_number():
+    def calculate():
         number1 = int(numberInput1.value)
-        number2 = int(numberInput2.value)
-        result = Year(number1 , number2)
-        output.text = (result , ' dey')
+        number2 = (numberInput2.value)
+        number3 = int(numberInput3.value)
+        result = P005(number1 , number2 , number3)
 
-    return root
+        output.text = result
 
 if __name__ in {"__main__", "__mp_main__"}:
     show_ui(True)
