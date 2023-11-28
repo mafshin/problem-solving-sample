@@ -1,4 +1,4 @@
-from P004 import *
+from P004.p004_solution import *
 
 def test1():
     assert written_number('1') == 'one'
